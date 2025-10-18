@@ -20,7 +20,28 @@
       "title": "Add Ethereum Address",
       "subtitle": "Import an Eth address",
       "description": "Import an Ethereum address to add to your portfolio.",
-      "mode": "no-view"
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "address",
+          "placeholder": "0x...",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "name",
+          "placeholder": "Main Eth Address",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "portfolio",
+      "title": "Portfolio",
+      "subtitle": "View your crypto portfolio",
+      "description": "View the total value and breakdown of your crypto portfolio.",
+      "mode": "view"
     }
   ],
   "dependencies": {
