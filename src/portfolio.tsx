@@ -1,6 +1,7 @@
 import { List } from "@raycast/api";
 import { usePortfolio } from "./hooks/usePortfolio";
 import { supportedTokens, tokenDisplayProperties } from "./util/tokens";
+import { EthAddressDetail } from "./components/EthAddressDetail";
 
 export default function Command() {
   const { portfolio, isLoading } = usePortfolio();
@@ -19,7 +20,12 @@ export default function Command() {
             subtitle={`${entries.length.toString()} address${entries.length !== 1 ? "es" : ""}`}
           >
             {entries.map(([address, addressInfo]) => (
-              <List.Item key={address} title={addressInfo.name} icon={{ source: tokenDisplay.image }} />
+              <List.Item
+                key={address}
+                title={addressInfo.name}
+                icon={{ source: tokenDisplay.image }}
+                detail={<EthAddressDetail address={address} name={addressInfo.name} />}
+              />
             ))}
           </List.Section>
         );
