@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "crypto-portfolio-tracker",
-  "title": "Crypto Portfolio Tracker",
-  "description": "Add crypto wallets by their addresses and track your entire portfolio.",
+  "name": "eth-portfolio-tracker",
+  "title": "Ethereum Portfolio Tracker",
+  "description": "Add Ethereum wallets by their addresses and track your entire portfolio.",
   "icon": "extension-icon.png",
   "author": "narghev",
   "platforms": [
@@ -39,8 +39,8 @@
     {
       "name": "portfolio",
       "title": "Portfolio",
-      "subtitle": "View your crypto portfolio",
-      "description": "View the total value and breakdown of your crypto portfolio.",
+      "subtitle": "View your Ethereum portfolio",
+      "description": "View the total value and breakdown of your Ethereum portfolio.",
       "mode": "view"
     }
   ],
