@@ -39,7 +39,3 @@ export const removeFromPortfolio = async (token: Tokens, address: AddressEntry["
 
   await LocalStorage.setItem(STORAGE_KEY, JSON.stringify(portfolio));
 };
-
-export const clearHistory = async (): Promise<void> => {
-  await LocalStorage.clear();
-};
