@@ -2,6 +2,7 @@ import { LaunchProps, showToast, Toast } from "@raycast/api";
 import { generateAddressName, generateRandomAddressName } from "./util/address-name";
 import { Tokens } from "./util/tokens";
 import { addToPortfolio } from "./util/portfolio";
+import { isValidEthereumAddress } from "./util/validation";
 
 type AddEthAddressArguments = {
   address: string;
@@ -10,6 +11,15 @@ type AddEthAddressArguments = {
 
 export default async function Command(props: LaunchProps<{ arguments: AddEthAddressArguments }>) {
   const { address, name } = props.arguments;
+
+  if (!isValidEthereumAddress(address)) {
+    await showToast({
+      style: Toast.Style.Failure,
+      title: "Invalid Ethereum Address",
+      message: "Please enter a valid Ethereum address",
+    });
+    return;
+  }
 
   const addressName = name
     ? generateAddressName(Tokens.ETH, address, name)
