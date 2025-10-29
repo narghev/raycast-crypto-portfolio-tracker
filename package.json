@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "eth-portfolio-tracker",
+  "name": "ethereum-portfolio-tracker",
   "title": "Ethereum Portfolio Tracker",
   "description": "Add Ethereum wallets by their addresses and track your entire portfolio.",
   "icon": "extension-icon.png",
