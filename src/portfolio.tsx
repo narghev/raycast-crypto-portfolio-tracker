@@ -1,10 +1,11 @@
-import { List } from "@raycast/api";
+import { Action, ActionPanel, List } from "@raycast/api";
 import { usePortfolio } from "./hooks/usePortfolio";
 import { supportedTokens, tokenDisplayProperties } from "./util/tokens";
 import { EthAddressDetail } from "./components/EthAddressDetail";
+import { removeFromPortfolio } from "./util/portfolio";
 
 export default function Command() {
-  const { portfolio, isLoading } = usePortfolio();
+  const { portfolio, isLoading, refresh } = usePortfolio();
 
   return (
     <List isLoading={isLoading} searchBarPlaceholder="Search addresses..." isShowingDetail>
@@ -25,6 +26,18 @@ export default function Command() {
                 title={addressInfo.name}
                 icon={{ source: tokenDisplay.image }}
                 detail={<EthAddressDetail address={address} name={addressInfo.name} />}
+                actions={
+                  <ActionPanel title="Portfolio Actions">
+                    <Action.CopyToClipboard title="Copy Address" content={address} />
+                    <Action
+                      title="Remove from Portfolio"
+                      onAction={async () => {
+                        await removeFromPortfolio(token, address);
+                        refresh();
+                      }}
+                    />
+                  </ActionPanel>
+                }
               />
             ))}
           </List.Section>
