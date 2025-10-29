@@ -39,8 +39,8 @@
     {
       "name": "portfolio",
       "title": "Portfolio",
-      "subtitle": "View your Ethereum portfolio",
-      "description": "View the total value and breakdown of your Ethereum portfolio.",
+      "subtitle": "View Your Crypto portfolio",
+      "description": "View the total value and breakdown of your crypto portfolio.",
       "mode": "view"
     }
   ],
