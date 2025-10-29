@@ -1,15 +1,23 @@
-# Ethereum Portfolio Tracker
+# Crypto Portfolio Tracker
 
-Add Ethereum wallets by their addresses and track your entire ETH portfolio.
+Add Crypto wallets by their addresses and track your entire Crypto portfolio.
 
-## Features
+## Commdands
+- `Add Ethereum Address <address> <name?>`: Add an Ethereum wallet address to your portfolio.
+- `Portfolio`: View your entire Crypto portfolio with real-time prices.
 
+## Supported Tokens
+
+### Ethereum (ETH) ✅
+#### Supported Features 🚀
 - Add multiple Ethereum wallet addresses
 - View individual address balances with real-time ETH prices
 
-### Feature Plans
-
+##### Feature Plans 🛠
 - Support custom RPC Url
 - Support ENS names
 - Show total portfolio value
 - Show address ERC-20 token balances and be able to add custom tokens
+
+### Solana (SOL) ❓
+### Bitcoin (BTC) ❓
